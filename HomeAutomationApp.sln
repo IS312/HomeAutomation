@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeAutomationApp", "HomeAutomationApp\HomeAutomationApp.csproj", "{F185924D-AD42-4BE9-B0B6-5C9E1EFC747E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F185924D-AD42-4BE9-B0B6-5C9E1EFC747E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F185924D-AD42-4BE9-B0B6-5C9E1EFC747E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F185924D-AD42-4BE9-B0B6-5C9E1EFC747E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F185924D-AD42-4BE9-B0B6-5C9E1EFC747E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB9D01F1-26F0-4861-8A80-D23D23A90761}
+	EndGlobalSection
+EndGlobal

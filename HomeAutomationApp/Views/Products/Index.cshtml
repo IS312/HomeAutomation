@@ -1,0 +1,54 @@
+﻿@model IEnumerable<HomeAutomationApp.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>View All Product</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Add New Product</a>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Warranty)
+            </th>
+
+            <th> Operations</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Warranty)
+            </td>
+            <td>
+                <a asp-action="Edit" class="btn" asp-route-id="@item.ProductID">Edit</a> |
+                <a asp-action="Details" class="btn" asp-route-id="@item.ProductID">Details</a> |
+                <a asp-action="Delete" class="btn" asp-route-id="@item.ProductID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,21 @@
+﻿@model IEnumerable<HomeAutomationApp.Models.Brand>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To Home Automation</h1>
+</div>
+<div class="card-columns">
+    @foreach (var item in Model)
+    {
+        <div class="card bg-warning">
+            <div class="card-body text-center">
+                <p class="card-text">
+                    <a class="font-weight-bolder" asp-action="ViewProductByType" asp-route-id="@item.BrandID">@item.BrandName</a>
+                </p>
+            </div>
+        </div>
+    }
+</div>
+

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<HomeAutomationApp.Models.Category>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>All Category Details</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add New Category</a>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryName)
+            </th>
+            <th> Operations </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+                <a asp-action="Edit" class="btn" asp-route-id="@item.CategoryID">Edit</a> |
+                <a asp-action="Details" class="btn" asp-route-id="@item.CategoryID">Details</a> |
+                <a asp-action="Delete" class="btn" asp-route-id="@item.CategoryID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

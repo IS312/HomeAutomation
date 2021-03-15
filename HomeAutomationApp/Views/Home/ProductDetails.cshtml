@@ -1,0 +1,27 @@
+﻿@model HomeAutomationApp.Models.Product
+
+@{
+    ViewData["Title"] = "ProductDetails";
+    var bookitem = Model;
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">@bookitem.ProductTitle</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <h3>Price($) : @bookitem.Price</h3>
+        <h3>Warranty: @bookitem.Warranty </h3>
+        <h5>Product Description :</h5>
+        <p>@bookitem.Description</p>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img class="card-img-top" src="../../bookphotos/@bookitem.ProductID@bookitem.Extension" alt="Card image">
+            
+        </div>
+    </div>
+
+</div>

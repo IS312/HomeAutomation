@@ -1,0 +1,20 @@
+﻿@model IEnumerable<HomeAutomationApp.Models.Category>
+
+@{
+    ViewData["Title"] = "ViewCategorys";
+}
+<div class="text-center">
+    <h1 class="display-4">All Categorys</h1>
+</div>
+<div class="card-columns">
+    @foreach (var item in Model)
+    {
+        <div class="card bg-warning">
+            <div class="card-body text-center">
+                <p class="card-text">
+                    <a class="font-weight-bolder" asp-action="ViewProductByCategory" asp-route-id="@item.CategoryID">@item.CategoryName</a>
+                </p>
+            </div>
+        </div>
+    }
+</div>
